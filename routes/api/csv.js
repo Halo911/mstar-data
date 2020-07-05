@@ -217,34 +217,34 @@ router.get('/fcf/:sid', async (req, res) => {
       parseFloat(arrFCF[len - 1].firstChild.data) >
       parseFloat(arrFCF[len - 4].firstChild.data)
     ) {
-      row += '<td>S-EXPAND</td>';
+      row += '<td id="s">S-EXPAND</td>';
     } else if (
       parseFloat(arrFCF[len - 1].firstChild.data) <
       parseFloat(arrFCF[len - 4].firstChild.data)
     ) {
-      row += '<td>S-SHRINK</td>';
+      row += '<td id="s">S-SHRINK</td>';
     }
     if (
       parseFloat(arrFCF[len - 1].firstChild.data) >
       parseFloat(arrFCF[len - 7].firstChild.data)
     ) {
-      row += '<td>M-EXPAND</td>';
+      row += '<td id="m">M-EXPAND</td>';
     } else if (
       parseFloat(arrFCF[len - 1].firstChild.data) <
       parseFloat(arrFCF[len - 7].firstChild.data)
     ) {
-      row += '<td>M-SHRINK</td>';
+      row += '<td id="m">M-SHRINK</td>';
     }
     if (
       parseFloat(arrFCF[len - 1].firstChild.data) >
       parseFloat(arrFCF[len - 10].firstChild.data)
     ) {
-      row += '<td>L-EXPAND</td>';
+      row += '<td id="l">L-EXPAND</td>';
     } else if (
       parseFloat(arrFCF[len - 1].firstChild.data) <
       parseFloat(arrFCF[len - 10].firstChild.data)
     ) {
-      row += '<td>L-SHRINK</td>';
+      row += '<td id="l">L-SHRINK</td>';
     }
 
     row = '<tr>' + row + '</tr>';
