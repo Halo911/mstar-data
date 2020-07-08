@@ -196,6 +196,8 @@ router.get('/fcf/:sid', async (req, res) => {
     arrFCF.splice(arrFCF.length - 1);
   }
 
+  // console.log(arrFCF);
+
   let status = 'NOTPASS';
   let countPositive = 0;
   let row = '';
@@ -216,7 +218,7 @@ router.get('/fcf/:sid', async (req, res) => {
     status = 'PASS';
 
     // DETERMINE EXPAND OR SHRINK
-    let len = arrFCF.length - 1;
+    let len = arrFCF.length;
     if (
       parseFloat(arrFCF[len - 1].firstChild.data) >
       parseFloat(arrFCF[len - 4].firstChild.data)
