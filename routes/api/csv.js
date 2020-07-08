@@ -192,6 +192,10 @@ router.get('/fcf/:sid', async (req, res) => {
   // console.log(arrFCF[0].localName + ': ' + arrFCF[0].firstChild.data);
   // console.log('Node: ' + arrFCF[0].toString());
 
+  if (arrFCF.length > 0) {
+    arrFCF.splice(arrFCF.length - 1);
+  }
+
   let status = 'NOTPASS';
   let countPositive = 0;
   let row = '';
